@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    //environment variables
+    //add environment variable
     environment{
         DIRECTORY_PATH="/directory_path_code_directory"
         TESTING_ENVIRONMENT = "Test Env"
@@ -9,7 +9,7 @@ pipeline {
 
     //stages for the pipeline
     stages{
-         stage('Build') {  //for creating the build
+         stage('Build') {  //create build
              
              steps{
                  echo "fetch the source code from the directory path specified by the environment variable"
@@ -18,7 +18,7 @@ pipeline {
        
     }
     
-     stage('Test') { // for running tests
+     stage('Test') { // test run
              
              steps{
                  echo "unit tests"
@@ -28,7 +28,7 @@ pipeline {
     }
     
     
-     stage('Code Quality Check') { //for checking the quality of the code
+     stage('Code Quality Check') { //Quality Check
              
              steps{
                  echo "check the quality of the code"
@@ -36,7 +36,7 @@ pipeline {
        
     }
     
-     stage('Deploy') { //Deployment into test environment for further tests by QA
+     stage('Deploy') { //Deploy
              
              steps{
                  echo "deploy the application to a testing environment specified by the environment variable"
@@ -47,7 +47,7 @@ pipeline {
         
     
     
-      stage('Approval') {  //Build approval stage for production deployment
+      stage('Approval') {  //Prod deploy approval
              
              steps{
                 sleep 10
