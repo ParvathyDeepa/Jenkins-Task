@@ -29,7 +29,7 @@ pipeline {
                     emailext (
                 subject: "Jenkins Build ${env.BUILD_NUMBER} - Test Stage ${currentBuild.result}",
                 body: "The Test stage of build ${env.BUILD_NUMBER} has completed with status: SUCCESS.",
-                to: 's222609875@deakin.edu.au',
+                to: 's223726911@deakin.edu.au',
                 attachLog: true
             )
                 
@@ -60,7 +60,7 @@ pipeline {
                     emailext (
                 subject: "Jenkins Build ${env.BUILD_NUMBER} - Security Scan Stage ${currentBuild.result}",
                 body: "The Security Scan stage of build ${env.BUILD_NUMBER} has completed with status: SUCCESS.",
-                to: 's222609875@deakin.edu.au',
+                to: 's223726911@deakin.edu.au',
                 attachLog: true
             )
                 
